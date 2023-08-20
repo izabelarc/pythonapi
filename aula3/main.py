@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from fastapi import FastAPI, Depends, HTTPException, status
 from data import cursos
 from apiTols import fake_db
@@ -50,3 +51,15 @@ async def delete(id: int):
         aluno["id"] = news_ids
 
     return cursos
+=======
+from fastapi import FastAPI, Depends
+from data import cursos
+from apiTols import fake_db
+from typing import Any
+
+app = FastAPI()
+
+@app.get("/cursos")
+async def get(db: Any = Depends(fake_db)):
+    return cursos
+>>>>>>> ef4ed64e96c0647aa1fee3916d0a9aba4d1c45f5
