@@ -11,8 +11,12 @@ python -m venv env - cria um ambiente virtual chamado env com scripts que ativam
  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned - comando para rodar no powershell sem ser adm 
  e em seguida colocar A(Sim para todos)
  .\env\Scripts\activate - ativa a máquina virtual
+ cd .\env\ - entra na pasta env
  pip install fastapi uvicorn - instala o CRUD
- uvicorn main:app --reload - dentro da pasta que tem o main e dentro do env
+ pip install jinja2  - instala o jinja
+ uvicorn main:app --reload - dentro da pasta que tem o main e dentro do env pára rodar
+
+ VAI ABRIR http://127.0.0.1:8000 e é só colocar o /(nome)
 
 CRUD (4 operações básicas)
     create - cria uma nova instância/dado
