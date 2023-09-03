@@ -25,3 +25,15 @@ async def create_cliente(nombre: str, plato_favorito: str):
 async def update_cliente(nombre: str, plato_favorito: str, id: int):
     resposta = update_cliente_by_id(nombre, plato_favorito, id, lista_clientes)
     return resposta
+
+@app.delete("/clientes-delete/{id}")
+async def delete(id: int):
+    id_int = int(id)
+    lista_clientes.pop(id_int - 1)
+
+    news_ids = 0
+    for aluno in lista_clientes:
+        news_ids += 1
+        aluno["id"] = news_ids
+
+    return lista_clientes

@@ -21,3 +21,14 @@ def update_cliente_by_id(nombre, plato_favorito, id, lista_clientes):
             cliente["plato_favorito"] = plato_favorito
 
     return lista_clientes
+
+def delete(id, nombre, plato_favorio, lista_clientes):
+    if id in lista_clientes:
+        del lista_clientes[id]
+        new_lista = {}
+       
+        acc = 1
+        for clientes_id in lista_clientes:
+            new_lista[acc] = lista_clientes[clientes_id]
+            acc += 1
+        cursos = new_lista
