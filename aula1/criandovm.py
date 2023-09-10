@@ -12,8 +12,9 @@ python -m venv env - cria um ambiente virtual chamado env com scripts que ativam
  e em seguida colocar A(Sim para todos)
  .\env\Scripts\activate - ativa a máquina virtual
  cd .\env\ - entra na pasta env
- pip install fastapi uvicorn - instala o CRUD
  pip install jinja2  - instala o jinja
+ pip install python-multipart
+ pip install fastapi uvicorn - instala o CRUD
  uvicorn main:app --reload - dentro da pasta que tem o main e dentro do env pára rodar
 
  VAI ABRIR http://127.0.0.1:8000 e é só colocar o /(nome)
@@ -29,3 +30,4 @@ CRUD (4 operações básicas)
         PUT
         DELETE
 """
+#@app faz parte do anotations, dão superpoderes para as variaveis que é o app
